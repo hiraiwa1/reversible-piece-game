@@ -1,10 +1,10 @@
-let black = 1;
-let white = 2;
+const BLACK = 1;
+const WHITE = 2;
 
 const CEL_NUM = 8;
 
 export default {
-  black,
-  white,
+  BLACK,
+  WHITE,
   CEL_NUM
 }

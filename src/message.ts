@@ -1,22 +1,27 @@
 
+/** メッセージの表示 */
+export function showMessage (str: string, isAfterHidden: boolean) {
+  const messageEl = document.querySelector<HTMLTextAreaElement>('#message');
 
-export function showMessage (str: string) {
-  const messageEl = document.querySelector('#message');
   if(messageEl) {
     messageEl.textContent = str;
 
-    setTimeout(() => {
-      messageEl.textContent = ''
-    }, 2000)
+    if(isAfterHidden) {
+      setTimeout(() => {
+        messageEl.textContent = ''
+      }, 1000)
+    }
   }
 }
 
-export function finishedMessage (white: number, black: number, textEl: HTMLTextAreaElement) {
+/** ゲーム終了時のテキスト */
+export function finishedMessage (white: number, black: number) {
+  const isAfterHidden = false;
   if(white > black) {
-    textEl.textContent = '白の勝ち!!';
+    showMessage('白の勝ち!!', isAfterHidden);
   } else if(white < black) {
-    textEl.textContent = '黒の勝ち!!';
+    showMessage('黒の勝ち!!', isAfterHidden);
   } else {
-    textEl.textContent = '引き分け';
+    showMessage('引き分け', isAfterHidden);
   }
 }

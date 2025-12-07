@@ -10,12 +10,15 @@ const weightData = [
   [ 30, -12,  0, -1, -1,  0, -12,  30],
 ];
 
-let data: number[][] = [];
+/** ボードの置き石のデータ配列
+ * 0: 石なし 1: 黒 2: 白
+ */
+let boardData: number[][] = [];
 
 let myTurn = false;
 
 export default {
   weightData,
-  data,
+  boardData,
   myTurn
 }

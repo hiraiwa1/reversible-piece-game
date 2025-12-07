@@ -23,6 +23,10 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(8, 60px);
@@ -63,4 +67,12 @@ body {
   font-size: 1.5rem;
   margin-block: 0 4px;
 
+}
+
+.message {
+  line-height: 1em;
+  margin-bottom: 0;
+  height: 1lh;
+  font-weight: bold;
+  font-size: 1.125rem;
 }
